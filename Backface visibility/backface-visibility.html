@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .card {
+            width: 100px;
+            height: 100px;
+            position: relative;
+
+            transform-style: preserve-3d;
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        .face {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            position: absolute;
+
+            backface-visibility: hidden;
+        }
+        .front {
+            text-align: center;
+            background: #ffc0cb;
+        }
+        .back {
+            text-align: center;
+            background: #dd546b;
+
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+   <div class="card">
+    <div class="face front">front</div>
+    <div class="face back">back</div>
+   </div>
+</body>
+</html>

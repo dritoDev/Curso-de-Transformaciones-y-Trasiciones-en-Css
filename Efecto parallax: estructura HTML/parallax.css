@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+.parallax__container {
+    width: 100%;
+    height: 100vh;
+    perspective: 8px;
+    perspective-origin: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+
+
+}
+
+.image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: 0 50%;
+}
+
+.image__background {
+    width: 100%;
+    height: auto;
+
+    transform: translateZ(0px) scale(1);
+    transform-origin: 0 50%;
+}
+
+.image__middle {
+    height: 100%;
+    width: 100%;
+
+    transform: translateZ(5px) scale(0.375);
+    transform-origin: 50%;
+}
+
+.image__foreground {
+
+    width: 100%;
+    height: auto;
+
+    transform: translateZ(2px) scale(0.75);
+    transform-origin: top;
+}
+
+.card {
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+
+    transform: rotate(-20px);
+}
+
+.one {
+    left: 30%;
+    top: 200px;
+    background-color: aquamarine;
+    /* inset: 10em 0 0 30%; */
+
+}
+
+.two {
+    right: 30%;
+    top: 300px;
+    background-color: lightcoral;
+
+    /* inset: 30em 20% 0 5%; */
+}
+
+.three {
+    right: 20%;
+    bottom: -1000px;
+    background-color: lightblue;
+    /* inset: 0 20% 0 -1000px; */
+
+}
